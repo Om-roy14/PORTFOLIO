@@ -212,20 +212,7 @@ a {
     rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
     rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
-@media screen and (max-width:760px) {
-  .r-main{
-  grid-template-columns: repeat(1, 300px);
-  grid-template-rows: repeat(3, 220px);
-    width: 97%;
-    padding: 2rem;
 
-  }
-  /* .r-items {
-    font: optional;
-  }
-  .r-item-des {ws;}
-  .r-button {sda;} */
-}
 .r-items {
   align-items: center;
   justify-content: center;
@@ -249,7 +236,18 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media screen and (max-width:360px) {
+  .r-main{
+  grid-template-columns: repeat(1, 300px);
+  grid-template-rows: repeat(3, 270px);
+    width: 97%;
+    padding: 0.8rem;
 
+  }
+  .r-items {
+    height: 250px;
+  }
+}
 .r-button {
   margin-top: 5px;
   padding-left: 7px;
