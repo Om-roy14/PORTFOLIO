@@ -114,8 +114,8 @@ a {
   border-radius: none;
 }
 .menu-icon{
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 @media screen and (max-width:768px){
@@ -138,6 +138,7 @@ a {
   top: 60px;
   right: 0;
   width: 200px;
+  border-radius: 20px;
   background: linear-gradient(to right, #ffffff, #abbaab);
   flex-direction: column;
   padding: 15px;
@@ -216,7 +217,7 @@ a {
   grid-template-columns: repeat(1, 300px);
   grid-template-rows: repeat(3, 220px);
     width: 97%;
-    padding: 3rem;
+    padding: 2rem;
 
   }
   /* .r-items {

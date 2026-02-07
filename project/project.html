@@ -12,12 +12,20 @@
             <div class="navbar">
                 <div class="logobar">
                     <img id="img1" src="../icons/logo.svg" alt />
-                    <p id="navhead">Om Roy | Portfolio</p>
+                    <p id="navhead">Portfolio</p>
                 </div>
                 <div class="rightbox">
                     <div class="profilebox">
                         <div id="box"><a href="../index.html">HOME</a></div>
                     </div>
+                </div>
+                <button type="button" class="menu-button" id="hamburger">
+                    <img src="../icons/hambutton.png" alt="hhfh"
+                        class="menu-icon">
+                </button>
+
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="../index.html">HOME</a>
                 </div>
             </header>
 
@@ -93,7 +101,8 @@
                         <div class="box">
                             <img id="img11" src="../icons/p.png" alt>
                             <div class="textbox">
-                                <h2 id="textt">RIDE REQUEST PREDICTION MODEL</h2>
+                                <h2 id="textt">RIDE REQUEST PREDICTION
+                                    MODEL</h2>
                                 <p>A machine learning project that predicts ride
                                     request
                                     demand based on datetime and location
@@ -122,7 +131,8 @@
                         <div class="box">
                             <img id="img11" src="../icons/p1.png" alt>
                             <div class="textbox">
-                                <h2 id="textt">STUDENT-PERFORMANCE-PREDICTON</h2>
+                                <h2
+                                    id="textt">STUDENT-PERFORMANCE-PREDICTON</h2>
                                 <p>This repository provides all the necessary
                                     components
                                     to run a machine-learning system that
@@ -216,7 +226,8 @@
                         <div class="box">
                             <img id="img11" src="../icons/p6.png" alt>
                             <div class="textbox">
-                                <h2 id="textt">CALORIE BURNT PREDICTION MODEL</h2>
+                                <h2 id="textt">CALORIE BURNT PREDICTION
+                                    MODEL</h2>
                                 <p>Calorie Burnt Prediction Model A machine
                                     learning
                                     project that predicts calories burned based
@@ -249,5 +260,13 @@
                     </div>
                 </div>
             </div>
+            <script>
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("open");
+});
+</script>
         </body>
     </html>

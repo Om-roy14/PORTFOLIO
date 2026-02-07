@@ -62,17 +62,9 @@ a {
 .navbar {
   width: 100vw;
   height: 60px;
-  background: #abbaab; 
-  background: -webkit-linear-gradient(
-    to right,
-    #ffffff,
-    #abbaab
-  ); 
-  background: linear-gradient(
-    to right,
-    #ffffff,
-    #abbaab
-  ); 
+  background: #abbaab;
+  background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+  background: linear-gradient(to right, #ffffff, #abbaab);
 
   display: flex;
   flex-direction: row;
@@ -85,11 +77,11 @@ a {
   justify-content: center;
   align-items: center;
 }
-#navhead{
+#navhead {
   font-size: 35px;
-  font-family:cursive;
+  font-family: cursive;
 }
-#box{
+#box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,24 +89,24 @@ a {
   text-align: center;
   width: 90px;
   height: 50px;
-  font-size:  25px;
+  font-size: 25px;
   background: linear-gradient(135deg, #ddd059, #ffffff);
   gap: 10px;
   transition: all 0.2s linear 0s;
 }
-#box:hover{
+#box:hover {
   transform: scale(1.1);
 }
 .rightbox {
   padding-right: 20px;
   gap: 20px;
-  display: flex;
+  display: none;
   align-items: center;
 }
-.description{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 #img1 {
   border-radius: 50%;
@@ -132,12 +124,69 @@ ul {
 .profilebox {
   padding-right: 15px;
   gap: 20px;
-  display: flex;
+  display: none;
   align-items: center;
 }
 a {
   text-decoration: none;
   color: black;
+}
+.menu-button {
+  display: none;
+  border-radius: none;
+}
+.menu-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+}
+@media screen and (min-width: 760px) {
+  .profilebox {
+    display: flex;
+  }
+  .rightbox {
+    display: flex;
+  }
+}
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #ffffff, #abbaab);
+  flex-direction: column;
+  padding: 15px;
+  gap: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu a {
+  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ddd059, #ffffff);
+  text-align: center;
+  transition: 0.2s;
+}
+
+.mobile-menu a:hover {
+  transform: scale(1.05);
+}
+
+/* show only on mobile */
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+.mobile-menu.open {
+  display: flex;
 }
 
 /* skills  */
