@@ -289,7 +289,7 @@ a {
     width: 0;
   }
 }
-@media screen and (max-width:400px) {
+@media screen and (max-width:768px) {
 
   #head1 {
 padding-top: 0px;
