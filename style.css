@@ -236,7 +236,7 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media screen and (max-width:360px) {
+@media screen and (max-width:400px) {
   .r-main{
   grid-template-columns: repeat(1, 300px);
   grid-template-rows: repeat(3, 270px);
@@ -333,7 +333,7 @@ a {
 }
 
 /* Responsive for mobile */
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .mainbox {
     flex-direction: column;
     width: 90%;

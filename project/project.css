@@ -179,9 +179,7 @@ a {
 #mobile{
   display:none ;
 }
-@media screen and (max-width:320px) {
 
-}
 .itembox {
   display: grid;
   grid-template-rows: repeat(auto, 1fr);
@@ -267,9 +265,9 @@ p {
 .repo:hover {
   transform: scale(1.1);
 }
-@media screen and (max-width:320px) {
+@media screen and (max-width:400px) {
 
-    .titlebox h2 {
+  .titlebox h2 {
   font-size: 40px;
 }
 .titlebox p {
