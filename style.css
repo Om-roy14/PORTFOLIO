@@ -241,11 +241,11 @@ a {
   grid-template-columns: repeat(1, 300px);
   grid-template-rows: repeat(3, 270px);
     width: 97%;
-    padding: 0.8rem;
+    padding: 35px;
 
   }
   .r-items {
-    height: 250px;
+    height: 270px;
   }
 }
 .r-button {
@@ -337,7 +337,7 @@ a {
   .mainbox {
     flex-direction: column;
     width: 90%;
-    
+
     height: 400px;
   }
 }
