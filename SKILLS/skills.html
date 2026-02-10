@@ -16,7 +16,7 @@
                 </div>
                 <div class="rightbox">
                     <div class="profilebox">
-                        <div id="box"><a href="../index.html">HOME</a></div>
+                        <div id="box"  data-link="../index.html"><a href="../index.html">HOME</a></div>
                     </div>
                 </div>
                 <button type="button" class="menu-button" id="hamburger">
@@ -302,6 +302,14 @@
 
             </div>
             <script>
+    const boxes = document.querySelectorAll("#box");
+  boxes.forEach(box => {
+    box.addEventListener("click", () => {
+      const link = box.getAttribute("data-link");
+      window.location.href = link;
+    });
+  });
+
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 

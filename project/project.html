@@ -16,7 +16,7 @@
                 </div>
                 <div class="rightbox">
                     <div class="profilebox">
-                        <div id="box"><a href="../index.html">HOME</a></div>
+                        <div id="box"  data-link="../index.html"><a href="../index.html">HOME</a></div>
                     </div>
                 </div>
                 <button type="button" class="menu-button" id="hamburger">
@@ -262,6 +262,28 @@
                 </div>
             </div>
             <script>
+
+
+  const repoSections = document.querySelectorAll(".repo");
+
+  repoSections.forEach(repo => {
+    repo.addEventListener("click", (e) => {
+      // if user didn't click directly on the link text
+      if (e.target.tagName !== "A") {
+        const link = repo.querySelector("a").href;
+        window.open(link, "_blank");
+      }
+    });
+  });
+
+
+                    const boxes = document.querySelectorAll("#box");
+  boxes.forEach(box => {
+    box.addEventListener("click", () => {
+      const link = box.getAttribute("data-link");
+      window.location.href = link;
+    });
+  });
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 

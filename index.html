@@ -8,19 +8,43 @@
   </head>
   <body>
     <header>
-      <div class="navbar">
+      <!-- <div class="navbar">
         <div class="logobar">
           <img id="img1" src="icons/logo.svg" alt />
           <p id="navhead">Portfolio</p>
         </div>
         <div class="rightbox">
           <div class="profilebox">
-            <!-- <span class="toggle" onclick="toggleDark()">🌙</span> -->
             <div id="box"><a href="#containers3">CONTACT</a></div>
             <div id="box"><a href="SKILLS/skills.html">SKILLS</a></div>
             <div id="box"><a href="project/project.html">PROJECTS</a></div>
           </div>
-        </div>
+        </div> -->
+        <div class="navbar">
+  <div class="logobar">
+    <img id="img1" src="icons/logo.svg" alt />
+    <p id="navhead">Portfolio</p>
+  </div>
+
+  <div class="rightbox">
+    <div class="profilebox">
+
+      <div id="box" data-link="#containers3">
+        <a href="#containers3">CONTACT</a>
+      </div>
+
+      <div id="box" data-link="SKILLS/skills.html">
+        <a href="SKILLS/skills.html">SKILLS</a>
+      </div>
+
+      <div id="box" data-link="project/project.html">
+        <a href="project/project.html">PROJECTS</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <button type="button" class="menu-button" id="hamburger">
   <img src="icons/hambutton.png" alt="hhfh" class="menu-icon">
 </button>
@@ -156,25 +180,9 @@
                 </p>
               </div>
             </div>
-
-            <!-- <div class="r-items">
-                            <h3>PARTICIPATED AT UIDAI DATA HACKATHON</h3>
-                            <div class="r-item-des">
-                                <p>
-                                    Participated in the UIDAI Hackathon, where I
-                                    performed Exploratory Data Analysis (EDA) on
-                                    the provided dataset to identify patterns,
-                                    trends, and key insights. Applied data
-                                    cleaning, visualization, and statistical
-                                    analysis techniques using Python to support
-                                    data-driven decision-making and solution
-                                    development. </p>
-
-                            </div>
-                        </div> -->
           </div>
         </div>
-        <div id="containers3" class="container3">
+        <!-- <div id="containers3" class="container3">
           <div class="mainbox">
             <div class="m-left">
               <div class="m-box">
@@ -217,7 +225,41 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
+
+<div id="containers3" class="container3">
+  <div class="mainbox">
+    <div class="m-left">
+      <div class="m-box">
+        <img id="m-img" src="icons/linkedin.png" alt />
+        <a id="m-text" target="_blank"
+           href="https://www.linkedin.com/in/om-kumar-roy-707a31323/">LINKEDIN</a>
+      </div>
+
+      <div class="m-box">
+        <img id="m-img" src="icons/image2.png" alt />
+        <a id="m-text" target="_blank"
+           href="https://github.com/Om-roy14">GITHUB</a>
+      </div>
+    </div>
+
+    <div class="m-right">
+      <div class="m-box">
+        <img id="m-img" src="icons/email.png" alt />
+        <a id="m-text" target="_blank"
+           href="https://mail.google.com/mail/?view=cm&fs=1&to=royom4948@gmail.com">EMAIL</a>
+      </div>
+
+      <div class="m-box">
+        <img id="m-img" src="icons/discord.png" alt />
+        <a id="m-text" target="_blank"
+           href="https://discord.com/channels/@me">DISCORD</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
         <div class="container5">
           <footer class="footer">
             <div class="footer-wrapper">
@@ -261,24 +303,31 @@
       </div>
     </main>
 
-    <!-- <script>
-      function toggleDark() {
-        document.body.classList.toggle("dark");
-      }
-    </script> -->
-    <!-- <script>
-const hamburger = document.getElementById("hamburger");
-const mobileMenu = document.getElementById("mobileMenu");
 
-hamburger.addEventListener("click", () => {
-  if (mobileMenu.style.display === "flex") {
-    mobileMenu.style.display = "none";
-  } else {
-    mobileMenu.style.display = "flex";
-  }
-});
-</script> -->
+
 <script>
+
+
+  const contactBoxes = document.querySelectorAll(".m-box");
+
+  contactBoxes.forEach(box => {
+    box.addEventListener("click", (e) => {
+      if (e.target.tagName !== "A") {
+        const link = box.querySelector("a").href;
+        window.open(link, "_blank");
+      }
+    });
+  });
+
+
+    const boxes = document.querySelectorAll("#box");
+
+  boxes.forEach(box => {
+    box.addEventListener("click", () => {
+      const link = box.getAttribute("data-link");
+      window.location.href = link;
+    });
+  });
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 
